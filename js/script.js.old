@@ -19,16 +19,19 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// MOBILE MENU TOGGLE
+// MOBILE MENU TOGGLE - FIXED VERSION
 const mobileToggle = document.getElementById('mobile-toggle');
 const navMenu = document.getElementById('nav-menu');
-const body = document.body;
 
 if (mobileToggle && navMenu) {
-  mobileToggle.addEventListener('click', function() {
+  console.log('Mobile toggle found'); // Debug - check console
+  
+  mobileToggle.addEventListener('click', function(e) {
+    e.stopPropagation();
     this.classList.toggle('active');
     navMenu.classList.toggle('active');
-    body.classList.toggle('menu-open');
+    document.body.classList.toggle('menu-open');
+    console.log('Toggle clicked'); // Debug - check console
   });
   
   // Close menu when clicking a link
@@ -36,7 +39,7 @@ if (mobileToggle && navMenu) {
     link.addEventListener('click', function() {
       mobileToggle.classList.remove('active');
       navMenu.classList.remove('active');
-      body.classList.remove('menu-open');
+      document.body.classList.remove('menu-open');
     });
   });
   
@@ -47,10 +50,31 @@ if (mobileToggle && navMenu) {
         !mobileToggle.contains(e.target)) {
       mobileToggle.classList.remove('active');
       navMenu.classList.remove('active');
-      body.classList.remove('menu-open');
+      document.body.classList.remove('menu-open');
+    }
+  });
+} else {
+  console.log('Mobile toggle not found'); // Debug - check console
+}
+
+// FADE-IN ON SCROLL ANIMATION
+const fadeElements = document.querySelectorAll('.service-card, .pricing-card, .why-item, .project-card');
+
+function checkFade() {
+  fadeElements.forEach(element => {
+    const elementTop = element.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+    
+    if (elementTop < windowHeight - 100) {
+      element.classList.add('visible');
     }
   });
 }
+
+// Initial check on load
+window.addEventListener('load', checkFade);
+// Check on scroll
+window.addEventListener('scroll', checkFade);
 
 // FORM SUBMISSION
 const form = document.querySelector('form');
