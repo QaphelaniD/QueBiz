@@ -858,4 +858,193 @@ footer {
 .social-links a {
   width: 40px;
   height: 40px;
-  background: rgba
+  background: rgba(255,255,255,0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.social-links a:hover {
+  background: var(--terracotta);
+  transform: translateY(-3px);
+}
+
+.copyright {
+  text-align: center;
+  padding-top: 30px;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  color: #8f887d;
+  font-size: 13px;
+}
+
+/* Fade-in animations for scroll */
+.fade-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* MOBILE STYLES */
+@media (max-width: 768px) {
+  body, html {
+    overflow-x: hidden;
+    width: 100%;
+  }
+  
+  header {
+    padding: 15px 5%;
+  }
+  
+  .mobile-toggle {
+    display: flex;
+  }
+  
+  nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    background: var(--cream);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    transition: right 0.3s ease;
+    box-shadow: -5px 0 30px rgba(0,0,0,0.1);
+    z-index: 1000;
+    display: flex;
+    padding: 60px 20px;
+  }
+  
+  nav.active {
+    right: 0;
+  }
+  
+  nav a {
+    font-size: 18px;
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+    border-bottom: 1px solid rgba(193, 123, 94, 0.1);
+  }
+  
+  nav a:last-child {
+    border-bottom: none;
+  }
+  
+  .hero h1 {
+    font-size: 42px;
+  }
+  
+  .hero h1 .light {
+    font-size: 36px;
+  }
+  
+  .hero p {
+    font-size: 16px;
+  }
+  
+  .service-grid, 
+  .pricing-grid, 
+  .why-grid, 
+  .showcase-grid, 
+  .process-grid,
+  .contact-container,
+  .footer-main {
+    grid-template-columns: 1fr;
+  }
+  
+  .btn-group {
+    flex-direction: column;
+  }
+  
+  .pricing-card.featured {
+    transform: scale(1);
+  }
+  
+  .pricing-card.featured:hover {
+    transform: translateY(-5px);
+  }
+  
+  .process-grid {
+    gap: 40px;
+  }
+  
+  .contact-container {
+    padding: 30px;
+  }
+  
+  .footer-main {
+    gap: 30px;
+    text-align: center;
+  }
+  
+  .social-links {
+    justify-content: center;
+  }
+  
+  .whatsapp-float {
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  .whatsapp-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 36px;
+  }
+  
+  .hero h1 .light {
+    font-size: 30px;
+  }
+  
+  .hero p {
+    font-size: 15px;
+  }
+  
+  .section-header h2 {
+    font-size: 32px;
+  }
+  
+  .service-card, 
+  .pricing-card, 
+  .why-item {
+    padding: 30px 20px;
+  }
+  
+  .project-description {
+    font-size: 13px;
+  }
+  
+  .process-step {
+    padding: 0 20px;
+  }
+  
+  .contact-detail {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .contact-detail i {
+    width: 40px;
+    height: 40px;
+  }
+}
