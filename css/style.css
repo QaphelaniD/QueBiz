@@ -176,7 +176,7 @@ nav a:hover::after {
   display: none;
 }
 
-/* Section Backgrounds - Alternating colors for visual interest */
+/* Section Backgrounds - Alternating colors */
 section {
   transition: background-color 0.3s ease;
 }
@@ -333,6 +333,34 @@ footer {
 .btn-outline:hover {
   border-color: var(--terracotta);
   background: rgba(193, 123, 94, 0.05);
+}
+
+/* Trust badges - micro trust signals */
+.trust-badges {
+  display: flex;
+  gap: 30px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.trust-badges span {
+  font-size: 14px;
+  color: var(--steel);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.trust-badges span i {
+  color: var(--terracotta);
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .trust-badges {
+    flex-direction: column;
+    gap: 15px;
+  }
 }
 
 /* WORK SECTION */
@@ -558,12 +586,39 @@ footer {
   margin-bottom: 20px;
 }
 
-.features {
-  color: #6b6258;
+/* Price features with outcome language */
+.price-features {
+  list-style: none;
+  text-align: left;
+  margin: 25px 0;
+  padding: 0;
+}
+
+.price-features li {
+  padding: 8px 0;
+  color: var(--steel);
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
   font-size: 14px;
-  line-height: 1.6;
-  margin-bottom: 25px;
-  min-height: 60px;
+  line-height: 1.5;
+  border-bottom: 1px dotted rgba(0,0,0,0.05);
+}
+
+.price-features li:last-child {
+  border-bottom: none;
+}
+
+.price-features li i {
+  color: var(--terracotta);
+  font-size: 14px;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.price-features li strong {
+  color: var(--charcoal);
+  font-weight: 600;
 }
 
 .pricing-note {
@@ -599,6 +654,7 @@ footer {
   justify-content: center;
   margin: 0 auto 20px;
   font-family: 'Space Mono', monospace;
+  border-radius: 50%;
 }
 
 .process-step h3 {
@@ -966,6 +1022,11 @@ footer {
   
   .btn-group {
     flex-direction: column;
+  }
+  
+  .trust-badges {
+    flex-direction: column;
+    gap: 15px;
   }
   
   .pricing-card.featured {
