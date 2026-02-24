@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>QueBizLaunchers | Website Design for Small Business South Africa</title>
+<title>QueBizLaunchers | Website Design for South African Small Businesses</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Website design for South African small businesses. Clean, professional sites starting at R2,500. Based in SA, we answer our own messages.">
+<meta name="description" content="Website design for South African small businesses. Clean, professional sites starting at R2,500. Based in Uitvall, serving clients anywhere in SA — from Ladysmith to Tugela Ferry and beyond. We answer our own messages.">
 
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,16 +21,23 @@
     <span class="logo-text">QueBiz<span>Launchers</span></span>
   </a>
   
-  <nav>
+  <!-- Mobile toggle button -->
+  <div class="mobile-toggle" id="mobile-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  
+  <nav id="nav-menu">
+    <a href="#home">Home</a>
     <a href="#work">Work</a>
     <a href="#services">Services</a>
     <a href="#pricing">Pricing</a>
-    <a href="#process">Process</a>
-    <a href="#contact" class="nav-cta">Book a call →</a>
+    <a href="#contact">Contact</a>
   </nav>
 </header>
 
-<!-- HERO -->
+<!-- HERO - Updated with better H1 -->
 <section class="hero" id="home">
   <div class="hero-content">
     <div class="hero-chip">
@@ -38,8 +45,8 @@
     </div>
     
     <h1>
-      Websites that<br>
-      <span>work for you</span>
+      Website Design for<br>
+      <span class="light">South African Small Businesses</span>
     </h1>
     
     <p>Clean, professional websites for business owners in South Africa. You focus on running your business — I'll handle the website.</p>
@@ -68,32 +75,38 @@
   </div>
 </section>
 
-<!-- WORK - Now with clickable cards linking to live sites -->
+<!-- WORK - Updated with your dad's website screenshot -->
 <section class="showcase" id="work">
   <div class="section-header">
     <h2>Recent <span>work</span></h2>
-    <p>Websites I've built for South African businesses. Click to visit live sites.</p>
+    <p>Websites I've built for South African businesses.</p>
   </div>
   
   <div class="showcase-grid">
     
-    <a href="https://thabocompliance.co.za" target="_blank" rel="noopener" class="project-card">
+    <!-- Your Dad's Website - Qinisani Dlamini Compliance Specialist -->
+    <a href="https://qaphelanid.github.io/Qinisani-Website/" target="_blank" rel="noopener" class="project-card">
       <div class="project-image">
-        <span class="logo-symbol" style="font-size: 64px;">✺</span>
+        <img src="images/qinisani-website.jpg" 
+             alt="Qinisani Dlamini compliance website - professional site for CIPC, SARS and B-BBEE services, built by QueBizLaunchers"
+             style="width: 100%; height: 100%; object-fit: cover;">
       </div>
       <div class="project-info">
-        <h3>Thabo Compliance</h3>
-        <p>Professional website for compliance consultant <span style="color: var(--terracotta);">→</span></p>
+        <h3>Qinisani Dlamini</h3>
+        <p>Compliance & Registration Specialist <span style="color: var(--terracotta);">→</span></p>
+        <span class="project-tag">Professional Services</span>
       </div>
     </a>
     
-    <a href="https://eyesightoptometry.co.za" target="_blank" rel="noopener" class="project-card">
+    <!-- Placeholder for Next Project -->
+    <a href="#" class="project-card" style="opacity: 0.7; pointer-events: none;">
       <div class="project-image">
-        <i class="fas fa-eye" style="font-size: 48px; color: var(--terracotta);"></i>
+        <i class="fas fa-plus-circle" style="font-size: 48px; color: var(--terracotta);"></i>
       </div>
       <div class="project-info">
-        <h3>Eyesight Optometry</h3>
-        <p>Clean, modern site with online booking <span style="color: var(--terracotta);">→</span></p>
+        <h3>Your Next Project</h3>
+        <p>Could be yours <span style="color: var(--terracotta);">→</span></p>
+        <span class="project-tag">Coming Soon</span>
       </div>
     </a>
     
@@ -130,88 +143,42 @@
   </div>
 </section>
 
-<!-- PRICING - New section with R2500 starting price -->
+<!-- PRICING - Minimal version -->
 <section class="pricing" id="pricing">
   <div class="section-header">
     <h2>Simple <span>pricing</span></h2>
-    <p>No surprises. No hidden fees. You know exactly what you're paying.</p>
+    <p>No hidden fees — you know exactly what you're paying</p>
   </div>
   
   <div class="pricing-grid">
     
-    <div class="pricing-card featured">
-      <div class="pricing-badge">Most popular</div>
-      <h3>Small business website</h3>
+    <div class="pricing-card">
+      <h3>Starter</h3>
       <div class="price">R2,500</div>
-      <p class="price-desc">Perfect for getting started online</p>
-      
-      <ul class="price-features">
-        <li><i class="fas fa-check"></i> 3-5 page website</li>
-        <li><i class="fas fa-check"></i> Mobile friendly</li>
-        <li><i class="fas fa-check"></i> Contact form</li>
-        <li><i class="fas fa-check"></i> Basic SEO</li>
-        <li><i class="fas fa-check"></i> 2 rounds of revisions</li>
-      </ul>
-      
+      <p class="features">3-5 pages • Mobile ready • Contact form • Basic SEO</p>
+      <a href="#contact" class="btn-outline" style="width: 100%; text-align: center;">Get started</a>
+    </div>
+    
+    <div class="pricing-card featured">
+      <div class="pricing-badge">Popular</div>
+      <h3>Business</h3>
+      <div class="price">R4,500</div>
+      <p class="features">5-8 pages • Mobile ready • Blog • SEO • Contact form</p>
       <a href="#contact" class="btn-primary" style="width: 100%; text-align: center;">Get started</a>
     </div>
     
     <div class="pricing-card">
-      <h3>Professional site</h3>
-      <div class="price">R4,500</div>
-      <p class="price-desc">More pages, more features</p>
-      
-      <ul class="price-features">
-        <li><i class="fas fa-check"></i> 5-10 page website</li>
-        <li><i class="fas fa-check"></i> Mobile friendly</li>
-        <li><i class="fas fa-check"></i> Contact form</li>
-        <li><i class="fas fa-check"></i> SEO optimization</li>
-        <li><i class="fas fa-check"></i> 3 rounds of revisions</li>
-        <li><i class="fas fa-check"></i> Blog setup</li>
-      </ul>
-      
-      <a href="#contact" class="btn-outline" style="width: 100%; text-align: center;">Let's talk</a>
+      <h3>E-commerce</h3>
+      <div class="price">R7,500</div>
+      <p class="features">Up to 20 products • Payment • Shopping cart • SEO</p>
+      <a href="#contact" class="btn-outline" style="width: 100%; text-align: center;">Get started</a>
     </div>
     
   </div>
   
-  <p class="pricing-note">Every website is different — need something custom? <a href="#contact" style="color: var(--terracotta);">Let's chat</a> about what you need.</p>
-</section>
-
-<!-- PROCESS -->
-<section class="process" id="process">
-  <div class="section-header">
-    <h2>How it <span>works</span></h2>
-    <p>Simple process, no surprises.</p>
-  </div>
-  
-  <div class="process-grid">
-    
-    <div class="process-step">
-      <div class="step-number">1</div>
-      <h3>Reach out</h3>
-      <p>Tell me about your business and what you need.</p>
-    </div>
-    
-    <div class="process-step">
-      <div class="step-number">2</div>
-      <h3>We chat</h3>
-      <p>A quick call to understand your goals.</p>
-    </div>
-    
-    <div class="process-step">
-      <div class="step-number">3</div>
-      <h3>I build</h3>
-      <p>I design and build your site while you work.</p>
-    </div>
-    
-    <div class="process-step">
-      <div class="step-number">4</div>
-      <h3>You launch</h3>
-      <p>Review, tweak, and go live.</p>
-    </div>
-    
-  </div>
+  <p style="text-align: center; margin-top: 30px; color: var(--steel);">
+    <i class="fas fa-comment"></i> Need something different? Let's chat — I'll give you a custom quote
+  </p>
 </section>
 
 <!-- WHY ME -->
@@ -245,7 +212,7 @@
   </div>
 </section>
 
-<!-- CONTACT - With privacy policy checkbox -->
+<!-- CONTACT -->
 <section class="contact" id="contact">
   <div class="contact-container">
     <div class="contact-info">
@@ -272,12 +239,12 @@
         <i class="fas fa-map-marker-alt"></i>
         <div>
           <strong>Based in</strong>
-          <p>South Africa</p>
+          <p>Uitvall, South Africa — serving clients anywhere</p>
         </div>
       </div>
     </div>
     
-    <div>
+    <div class="contact-form">
       <form action="https://formspree.io/f/mlgwlzvl" method="POST">
         <div class="form-group">
           <input type="text" name="name" placeholder="Your name" required>
@@ -313,32 +280,35 @@
   </div>
 </a>
 
-<!-- FOOTER - Now with Privacy Policy link -->
+<!-- FOOTER -->
 <footer>
-  <div class="footer-logo">
-    <div class="logo">
-      <span class="logo-symbol" style="color: var(--terracotta);">✺</span>
-      <span class="logo-text" style="color: white;">QueBiz<span style="color: var(--terracotta);">Launchers</span></span>
+  <div class="footer-main">
+    <div>
+      <div class="footer-logo">QueBiz<span>Launchers</span></div>
+      <p>Website design for South African small businesses. Personal service, clear advice.</p>
+    </div>
+    
+    <div class="footer-links">
+      <h4>Navigation</h4>
+      <a href="#home">Home</a>
+      <a href="#work">Work</a>
+      <a href="#services">Services</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact">Contact</a>
+    </div>
+    
+    <div class="footer-links">
+      <h4>Connect</h4>
+      <div class="social-links">
+        <a href="https://wa.me/27783482716" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+        <a href="#" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+      </div>
     </div>
   </div>
   
-  <div class="footer-links">
-    <a href="#work">Work</a>
-    <a href="#services">Services</a>
-    <a href="#pricing">Pricing</a>
-    <a href="#process">Process</a>
-    <a href="#contact">Contact</a>
-    <a href="privacy.html">Privacy</a>
-  </div>
-  
-  <div class="social-links">
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-x-twitter"></i></a>
-    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-  </div>
-  
   <div class="copyright">
-    <p>© 2026 QueBizLaunchers — websites for South African small businesses</p>
+    <p>© 2026 QueBizLaunchers — Website Design for South African Small Businesses</p>
   </div>
 </footer>
 
