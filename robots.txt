@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://qaphelanid.github.io/QueBiz/sitemap.xml
